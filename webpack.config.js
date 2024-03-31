@@ -1,14 +1,11 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV == 'production';
+const isProduction = process.env.NODE_ENV == "production";
 
-
-const stylesHandler = 'style-loader';
-
-
+const stylesHandler = "style-loader";
 
 const config = {
   entry: "./src/index.tsx",
@@ -36,15 +33,36 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: [
+          stylesHandler,
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
+            },
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "postcss-loader", "sass-loader"],
+        use: [
+          stylesHandler,
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
+            },
+          },
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.png$/,
-        use: ["url-loader"],
+        generator: {
+          filename: "assets/images/[name][ext][query]",
+        },
+        type: "asset/resource",
       },
       // {
       //     test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -61,12 +79,10 @@ const config = {
 };
 
 module.exports = () => {
-    if (isProduction) {
-        config.mode = 'production';
-        
-        
-    } else {
-        config.mode = 'development';
-    }
-    return config;
+  if (isProduction) {
+    config.mode = "production";
+  } else {
+    config.mode = "development";
+  }
+  return config;
 };

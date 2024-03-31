@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  backdrop-filter: blur(10px);
+  background: url('assets/images/background.png');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
