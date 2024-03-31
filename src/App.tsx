@@ -33,7 +33,7 @@ export function App(): JSX.Element {
           </section>
           <section>
             <h2>メンバー紹介</h2>
-            <div className="flex flex-row justify-center">
+            <div className="flex flex-col md:flex-row justify-center">
               <Member
                 name="星野Ai"
                 face={ai}

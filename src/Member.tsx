@@ -22,10 +22,10 @@ export function Member({
   comment,
 }: Props): JSX.Element {
   return (
-    <div className="w-1/5 m-3">
+    <div className="md:w-1/5 m-3">
       <div>{name}</div>
       <img
-        className="w-full aspect-square object-cover"
+        className="w-full md:aspect-square object-cover"
         src={face}
         onMouseOver={(e) => (e.currentTarget.src = hoverFace)}
         onMouseOut={(e) => (e.currentTarget.src = face)}
