@@ -24,7 +24,11 @@ export function App(): JSX.Element {
             <h2>グループについて</h2>
             <p>
               <img src={background} className="mx-auto w-2/3" />
-              ALtは、2024年4月1日に結成されたアイドルグループです。メンバーは星野Ai、ルル、skytomoの3人です。それぞれの個性を活かした楽曲やパフォーマンスをお楽しみいただけます。
+              ALt（オルト）は、2024年4月1日に結成されたアイドルグループです。
+              <br />
+              メンバーは星野Ai、ルル、skytomoの3人です。
+              <br />
+              普段とは違う、もうひとつの姿でみんなを魅了しちゃいます！
             </p>
           </section>
           <section>
@@ -54,7 +58,7 @@ export function App(): JSX.Element {
                 hoverFace={skytomoHover}
                 profile="透明な翼を持つシピルカくん。突然、電波を受信して変なことを言い出すことがある。でも、そのおかげで、みんなが笑顔になることもしばしば。"
                 favoriteFood="オムライス"
-                hobby="プログラミング"
+                hobby="お絵かき"
                 comment="キラキラ～✨️"
               />
             </div>
@@ -68,10 +72,7 @@ export function App(): JSX.Element {
           >
             Tweets by hoshinoAi0602
           </a>{" "}
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-          ></script>
+          <script async src="https://platform.twitter.com/widgets.js"></script>
         </section>
       </main>
       <footer>このウェブサイトは2024年4月1日に公開されました。</footer>
