@@ -31,9 +31,28 @@ export function Member({
         onMouseOut={(e) => (e.currentTarget.src = face)}
       />
       <div>{profile}</div>
-      <div>好きな食べ物：{favoriteFood}</div>
-      <div>趣味：{hobby}</div>
-      <div>ひとこと：{comment}</div>
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row" className="text-right align-top">
+              好きな食べ物：
+            </th>
+            <td className="text-left w-1/2">{favoriteFood}</td>
+          </tr>
+          <tr>
+            <th scope="row" className="text-right align-top">
+              趣味：
+            </th>
+            <td className="text-left w-1/2">{hobby}</td>
+          </tr>
+          <tr>
+            <th scope="row" className="text-right align-top">
+              ひとこと：
+            </th>
+            <td className="text-left w-1/2">{comment}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
