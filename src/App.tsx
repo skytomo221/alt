@@ -1,13 +1,20 @@
 import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Intersection } from "@splidejs/splide-extension-intersection";
 
 import alt from "./assets/images/alt.svg";
 import ai from "./assets/images/ai.png";
 import aiHover from "./assets/images/ai-hover.png";
+import aiSmile from "./assets/images/ai-smile.png";
 import background from "./assets/images/background.png";
-import skytomo from "./assets/images/skytomo.png";
-import skytomoHover from "./assets/images/skytomo-hover.png";
+import relax from "./assets/images/relax.png";
 import lulu from "./assets/images/lulu.png";
 import luluHover from "./assets/images/lulu-hover.png";
+import luluPointing from "./assets/images/lulu-pointing.png";
+import posing from "./assets/images/posing.png";
+import skytomo from "./assets/images/skytomo.png";
+import skytomoHover from "./assets/images/skytomo-hover.png";
+import waitingRoom from "./assets/images/waiting-room.png";
 import { Member } from "./Member";
 
 export function App(): JSX.Element {
@@ -22,8 +29,47 @@ export function App(): JSX.Element {
         <section>
           <section>
             <h2>グループについて</h2>
+            <Splide
+              aria-label="グループやメンバーの写真"
+              className="w-full md:w-2/3 mx-auto"
+              extensions={{ Intersection }}
+              options={{
+                autoplay: "pause",
+                intersection: {
+                  inView: {
+                    autoplay: true,
+                  },
+                  outView: {
+                    autoplay: false,
+                  },
+                },
+                interval: 6000,
+                rewind: true,
+              }}
+            >
+              <SplideSlide>
+                <img src={background} alt="ステージ正面から見たメンバーたち" />
+              </SplideSlide>
+              <SplideSlide>
+                <img
+                  src={posing}
+                  alt="ステージの上でポーズを取っているメンバーたち"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <img src={waitingRoom} alt="控室のメンバーたち" />
+              </SplideSlide>
+              <SplideSlide>
+                <img src={relax} alt="控室でくつろぐメンバーたち" />
+              </SplideSlide>
+              <SplideSlide>
+                <img src={aiSmile} alt="笑顔のAiさん" />
+              </SplideSlide>
+              <SplideSlide>
+                <img src={luluPointing} alt="指差すルルさん" />
+              </SplideSlide>
+            </Splide>
             <p>
-              <img src={background} className="mx-auto w-2/3" />
               ALt（オルト）は、2024年4月1日に結成されたアイドルグループです。
               <br />
               メンバーは星野Ai、ルル、skytomoの3人です。
