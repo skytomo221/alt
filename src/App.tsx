@@ -17,7 +17,7 @@ export function App(): JSX.Element {
           <h1>ALt</h1>
           <section>
             <h2>メンバー紹介</h2>
-          <div className="flex flex-row">
+            <div className="flex flex-row justify-center">
               <Member
                 name="星野Ai"
                 face={ai}
