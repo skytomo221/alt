@@ -1,7 +1,9 @@
 import React from "react";
 
+import alt from "./assets/images/alt.svg";
 import ai from "./assets/images/ai.png";
 import aiHover from "./assets/images/ai-hover.png";
+import background from "./assets/images/background.png";
 import skytomo from "./assets/images/skytomo.png";
 import skytomoHover from "./assets/images/skytomo-hover.png";
 import lulu from "./assets/images/lulu.png";
@@ -11,10 +13,20 @@ import { Member } from "./Member";
 export function App(): JSX.Element {
   return (
     <>
-      <header>ALt</header>
-      <main className="mx-auto w-full max-w-7xl bg-black/30 z-10">
+      <header className="mx-auto w-full">
+        <div className="flex flex-row justify-center">
+          <img src={alt} alt="ALt" className="w-1/4" />
+        </div>
+      </header>
+      <main className="mx-auto w-full max-w-7xl bg-black/30">
         <section>
-          <h1>ALt</h1>
+          <section>
+            <h2>グループについて</h2>
+            <p>
+              <img src={background} className="mx-auto w-2/3" />
+              ALtは、2024年4月1日に結成されたアイドルグループです。メンバーは星野Ai、ルル、skytomoの3人です。それぞれの個性を活かした楽曲やパフォーマンスをお楽しみいただけます。
+            </p>
+          </section>
           <section>
             <h2>メンバー紹介</h2>
             <div className="flex flex-row justify-center">
@@ -47,6 +59,19 @@ export function App(): JSX.Element {
               />
             </div>
           </section>
+        </section>
+        <section>
+          <h2>お知らせ・告知</h2>
+          <a
+            className="twitter-timeline"
+            href="https://twitter.com/hoshinoAi0602?ref_src=twsrc%5Etfw"
+          >
+            Tweets by hoshinoAi0602
+          </a>{" "}
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+          ></script>
         </section>
       </main>
       <footer>このウェブサイトは2024年4月1日に公開されました。</footer>
