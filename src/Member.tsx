@@ -30,7 +30,7 @@ export function Member({
         onMouseOver={(e) => (e.currentTarget.src = hoverFace)}
         onMouseOut={(e) => (e.currentTarget.src = face)}
       />
-      <div>{profile}</div>
+      <div className="text-left">{profile}</div>
       <table>
         <tbody>
           <tr>
