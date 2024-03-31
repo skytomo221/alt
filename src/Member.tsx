@@ -22,7 +22,7 @@ export function Member({
   comment,
 }: Props): JSX.Element {
   return (
-    <div className="w-1/5">
+    <div className="w-1/5 m-3">
       <div>{name}</div>
       <img
         className="w-full aspect-square object-cover"
