@@ -58,7 +58,7 @@ const config = {
         ],
       },
       {
-        test: /\.png$/,
+        test: /\.(png|svg)$/,
         generator: {
           filename: "assets/images/[name][ext][query]",
         },
