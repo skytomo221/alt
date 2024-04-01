@@ -69,11 +69,11 @@ export function App(): JSX.Element {
                 <img src={luluPointing} alt="指差すルルさん" />
               </SplideSlide>
             </Splide>
-            <p>
+            <p className="text-left md:text-center" >
               ALt（オルト）は、2024年4月1日に結成されたアイドルグループです。
-              <br />
+              <br className="hidden md:block" />
               メンバーは星野Ai、ルル、skytomoの3人です。
-              <br />
+              <br className="hidden md:block" />
               普段とは違う、もうひとつの姿でみんなを魅了しちゃいます！
             </p>
           </section>
